@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Win Condition: Redirect to a link
         if (playerX === goal.offsetLeft && playerY === goal.offsetTop) {
             clearInterval(timer);
-            alert("🎉 You win! Redirecting...");
+            alert("🎉 Galing ng baby ko! I love youuu...");
             window.location.href = "https://aceravenn.github.io/aceraven.github.io/"; // Replace with your URL
         }
     });
