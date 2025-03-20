@@ -32,10 +32,10 @@
             let newX = playerX, newY = playerY;
 
             // Reversed movement controls
-            if (e.key === "ArrowRight") newY -= step; // Moves left
+            if (e.key === "ArrowRight") newX -= step; // Moves left
             if (e.key === "ArrowLeft") newY += step; // Moves right
             if (e.key === "ArrowDown") newX -= step; // Moves up
-            if (e.key === "ArrowUp") newX += step; // Moves down
+            if (e.key === "ArrowUp") newY += step; // Moves down
 
             // Prevent moving outside boundaries
             if (newX < 0 || newX >= 300 || newY < 0 || newY >= 300) return;
