@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Reversed movement controls
         if (e.key === "ArrowRight") newY -= step; // Moves left
         if (e.key === "ArrowLeft") newX += step; // Moves right
-        if (e.key === "ArrowDown") newX -= step; // Moves up
-        if (e.key === "ArrowUp") newY += step; // Moves down
+        if (e.key === "ArrowDown") newY -= step; // Moves up
+        if (e.key === "ArrowUp") newX += step; // Moves down
 
         // Prevent moving outside boundaries
         if (newX < 0 || newX >= 300 || newY < 0 || newY >= 300) return;
@@ -49,9 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
         player.style.left = `${playerX}px`;
         player.style.top = `${playerY}px`;
 
+        // Win Condition: Redirect to a link
         if (playerX === goal.offsetLeft && playerY === goal.offsetTop) {
             clearInterval(timer);
-            alert("🎉 You win!");
+            alert("🎉 You win! Redirecting...");
+            window.location.href = "https://aceravenn.github.io/aceraven.github.io/"; // Replace with your URL
         }
     });
 
